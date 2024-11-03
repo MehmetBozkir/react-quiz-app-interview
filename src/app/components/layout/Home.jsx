@@ -1,4 +1,13 @@
+"use client";
+import { useState } from "react";
+import Quiz from "../pieces/Quiz";
+
 const Home = () => {
+  const [startQuiz, setStartQuiz] = useState(false);
+
+  if (startQuiz) {
+    return <Quiz />;
+  }
 
   return (
     <div>
@@ -38,6 +47,7 @@ const Home = () => {
               <div className="form-control mt-6">
                 <button
                   className="btn btn-primary"
+                  onClick={() => setStartQuiz(true)}
                 >
                   Get Started
                 </button>
