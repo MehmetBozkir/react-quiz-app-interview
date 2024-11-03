@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React Quiz App Interview
 
-## Getting Started
+<img align="center" src="https://github.com/user-attachments/assets/5f33c453-9813-476a-9b10-f1ea7c70de96" height="500" width="1200" alt="Responsive Photo 1"/>
 
-First, run the development server:
+<hr> 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Vaka Çalışması 2 | Quiz Uygulaması | Sade ve Basit Nextjs.
+
+<p align="center"> 
+
+<br> 
+
+## :link: Demo
+  - <a target="_blank" href="https://react-quiz-app-interview-x.netlify.app/"> Netflify </a> sitenin bir demosunu kendiniz görmek ve incelemek için.
+
+<br> 
+  
+:wrench: Özellikler
+  ------------------------------
+  
+- Bileşen Tasarımları: Component tasarımlarında DaisyUI paketi kullanılmıştır.
+- Veri Çekme: API’den veri çekmek için Axios kullanılmıştır.
+- Duyarlı (Responsive) Tasarım: Tüm bileşenler responsive tasarım ilkelerine uygun olarak geliştirilmiştir.
+- Dizin Yapısı: Proje kök dizininde basit ve anlaşılır bir dosyalama yapısı tercih edilmiştir.
+- TCSS Kütüphanesi: Stil yönetimi için TailwindCSS kullanılmıştır.
+- Geliştirme Süreci: Proje geliştirme süreci branch’ler ve commit history üzerinden yürütülmüş olup, her commit değişiklik açıklamaları içermektedir.
+- SEO ve Meta Bilgileri: Projenin meta bilgileri ve SEO ayarları yapılmıştır.
+- Favicon: Projeye favicon eklenmiştir.
+- API ile Soru Oluşturma: API’de bulunan title endpoint’i soruları oluşturur. 100 endpoint arasından her seferinde farklı 10 adet title seçilerek, her denemede yeni sorular oluşturulur.
+- API ile Cevap Oluşturma: API’de bulunan body endpoint’i cevapları oluşturur. 100 endpoint arasından her seferinde farklı 10 adet body seçilerek, her denemede yeni sorular oluşturulur. Her sorunun (title) doğru cevabı (body), kendi endpoint’inde bulunan veridir.
+- Soru Süresi: Her soru ekranda 30 saniye kalır ve her soru için özel çalışan bir zamanlayıcı eklenmiştir.
+- İlk 10 Saniye Kısıtlaması: Her sorunun ilk 10 saniyesinde işaretleme yapılamaz.
+- Boş Sorular: 30 saniye boyunca işaretlenmeyen soru, boş olarak kabul edilip sonuç tablosunda boş olarak kabul edilir.
+- Geçmişe Dönüş Engeli: Geçmiş sorulara dönmek engellenmiştir.
+- Sonuç Ekranı: Sonuç ekranı mobil ekranlarda daraltılarak uyumlu hale getirilmiştir.
+- UI/UX Tasarımı: Kullanıcı arayüzü ve kullanıcı deneyimi tasarıma dikkat edilerek geliştirilmiştir.
+
+  <br> 
+
+ 
+  ## :book: Nasıl kullanılır
+Bu uygulamayı klonlamak ve çalıştırmak için bilgisayarınızda [Git](https://git-scm.com/downloads) ve [ReactJS](https://reactjs.org/docs/getting-started.html) yüklü olmalıdır. Komut satırınızdan:
+
 ```
+# Bu depoyu klonlayın
+$ git clone https://github.com/MehmetBozkir/react-quiz-app-interview.git
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Depoya gidin
+$ cd react-quiz-app-interview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# Bağımlılıkları yükleyin
+$ npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Uygulamayı çalıştırın
+$ npm run dev
+```
