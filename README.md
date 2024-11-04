@@ -19,11 +19,13 @@ Vaka Çalışması 2 | Quiz Uygulaması | Sade ve Basit Nextjs.
   ------------------------------
   
 - Bileşen Tasarımları: Component tasarımlarında DaisyUI paketi kullanılmıştır.
+- Geliştirme Süreci: Proje, Yarn kullanılarak oluşturulmuştur. Branch'ler ve commit geçmişi ile yönetilmiş, her commit değişiklik açıklamaları içermektedir.
+- React-hot-toast Bildirimleri: Yanıt verirken yönlendirici bildirimler sunmak için react-hot-toast paketi entegre edilmiştir.
+- Animasyonlar: Soru kartları arasındaki geçişlerde, framer-motion paketi ile animasyonlar eklenmiştir.
 - Veri Çekme: API’den veri çekmek için Axios kullanılmıştır.
 - Duyarlı (Responsive) Tasarım: Tüm bileşenler responsive tasarım ilkelerine uygun olarak geliştirilmiştir.
 - Dizin Yapısı: Proje kök dizininde basit ve anlaşılır bir dosyalama yapısı tercih edilmiştir.
 - TCSS Kütüphanesi: Stil yönetimi için TailwindCSS kullanılmıştır.
-- Geliştirme Süreci: Proje geliştirme süreci branch’ler ve commit history üzerinden yürütülmüş olup, her commit değişiklik açıklamaları içermektedir.
 - SEO ve Meta Bilgileri: Projenin meta bilgileri ve SEO ayarları yapılmıştır.
 - Favicon: Projeye favicon eklenmiştir.
 - API ile Soru Oluşturma: API’de bulunan title endpoint’i soruları oluşturur. 100 endpoint arasından her seferinde farklı 10 adet title seçilerek, her denemede yeni sorular oluşturulur.
@@ -32,6 +34,7 @@ Vaka Çalışması 2 | Quiz Uygulaması | Sade ve Basit Nextjs.
 - İlk 10 Saniye Kısıtlaması: Her sorunun ilk 10 saniyesinde işaretleme yapılamaz.
 - Boş Sorular: 30 saniye boyunca işaretlenmeyen soru, boş olarak kabul edilip sonuç tablosunda boş olarak kabul edilir.
 - Geçmişe Dönüş Engeli: Geçmiş sorulara dönmek engellenmiştir.
+- Soru Sayacı: Sınav esnasında kaçıncı soruda olduğunu gösteren bir soru sayacı eklenmiştir.
 - Sonuç Ekranı: Sonuç ekranı mobil ekranlarda daraltılarak uyumlu hale getirilmiştir.
 - UI/UX Tasarımı: Kullanıcı arayüzü ve kullanıcı deneyimi tasarıma dikkat edilerek geliştirilmiştir.
 
@@ -49,8 +52,8 @@ $ git clone https://github.com/MehmetBozkir/react-quiz-app-interview.git
 $ cd react-quiz-app-interview
 
 # Bağımlılıkları yükleyin
-$ npm install
+$ yarn install
 
 # Uygulamayı çalıştırın
-$ npm run dev
+$ yarn next dev
 ```
