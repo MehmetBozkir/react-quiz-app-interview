@@ -4,6 +4,7 @@ import { fetchQuestions } from "../utils/api";
 import QuestionCard from "./QuestionCard";
 import Score from "./Score";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import { Toaster } from "react-hot-toast";
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
@@ -67,7 +68,8 @@ const Quiz = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="timer-container flex justify-center md:justify-end mb-4 p-4">
+      <div className="timer-container flex justify-end mb-4 p-4">
+      <Toaster position="top-center" reverseOrder={false} />
         <CountdownCircleTimer
           isPlaying
           duration={30}

@@ -1,3 +1,5 @@
+import { toast } from "react-hot-toast";
+
 const QuestionCard = ({
   question,
   onAnswer,
@@ -6,6 +8,15 @@ const QuestionCard = ({
   questionslength,
 }) => {
   const choices = ["A", "B", "C", "D"];
+
+  const handleAnswerClick = (option) => {
+    if (!isClickable) {
+      toast.error("Answer after ten seconds");
+    } else {
+      onAnswer(option);
+      toast.success("Answer is saved");
+    }
+  };
 
   return (
     <div className="question-card p-4 md:w-3/5 mx-auto">
@@ -19,13 +30,12 @@ const QuestionCard = ({
             {question.options.map((option, index) => (
               <button
                 key={index}
-                onClick={() => isClickable && onAnswer(option)}
+                onClick={() => handleAnswerClick(option)}
                 className={`option border p-2 rounded ${
                   isClickable
                     ? "btn btn-outline "
-                    : "bg-gray-300 text-gray-400 cursor-not-allowed"
+                    : "btn text-gray-400 cursor-not-allowed"
                 }`}
-                disabled={!isClickable}
               >
                 {`${choices[index]}-) ${option}`}
               </button>
