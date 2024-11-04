@@ -44,16 +44,16 @@ Case Study 2 | Quiz Application | Simple and Minimalistic Next.js
 To clone and run this application, you’ll need [Git](https://git-scm.com/downloads) and [ReactJS](https://reactjs.org/docs/getting-started.html) installed on your computer. From your command line:
 
 ```
-# Bu depoyu klonlayın
+# Clone this repository
 $ git clone https://github.com/MehmetBozkir/react-quiz-app-interview.git
 
-# Depoya gidin
+# Navigate to the repository
 $ cd react-quiz-app-interview
 
-# Bağımlılıkları yükleyin
+# Install dependencies
 $ yarn install
 
-# Uygulamayı çalıştırın
+# Run the application
 $ yarn next dev
 ```
 
