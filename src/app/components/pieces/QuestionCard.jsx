@@ -1,4 +1,5 @@
 import { toast } from "react-hot-toast";
+import { motion } from "framer-motion";
 
 const QuestionCard = ({
   question,
@@ -19,7 +20,19 @@ const QuestionCard = ({
   };
 
   return (
-    <div className="question-card p-4 md:w-3/5 mx-auto">
+    <motion.div
+      className="question-card p-4 md:w-3/5 mx-auto"
+      key={currentQuestion}
+      initial={{ x: 300, opacity: 0, rotate: 10, scale: 0.8 }}
+      animate={{ x: 0, opacity: 1, rotate: 0, scale: 1 }}
+      exit={{ x: -300, opacity: 0, rotate: -10, scale: 0.8 }}
+      transition={{
+        type: "spring",
+        stiffness: 120,
+        damping: 15,
+        duration: 0.7,
+      }}
+    >
       <div className="mockup-window bg-gray-300 border">
         <h1 className="bg-white text-end px-4 text-lg py-2 font-bold">
           {currentQuestion + 1} / {questionslength}
@@ -43,7 +56,7 @@ const QuestionCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
