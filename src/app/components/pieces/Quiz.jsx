@@ -67,7 +67,7 @@ const Quiz = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="timer-container flex justify-end mb-4 p-4">
+      <div className="timer-container flex justify-center md:justify-end mb-4 p-4">
         <CountdownCircleTimer
           isPlaying
           duration={30}
@@ -96,6 +96,8 @@ const Quiz = () => {
           question={questions[currentQuestion]}
           onAnswer={handleAnswer}
           isClickable={isClickable}
+          currentQuestion={currentQuestion}
+          questionslength={questions.length}
         />
       )}
     </div>
