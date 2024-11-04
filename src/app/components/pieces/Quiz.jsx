@@ -5,6 +5,7 @@ import QuestionCard from "./QuestionCard";
 import Score from "./Score";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Toaster } from "react-hot-toast";
+import { AnimatePresence } from "framer-motion";
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
@@ -69,7 +70,7 @@ const Quiz = () => {
   return (
     <div className="min-h-screen">
       <div className="timer-container flex justify-end mb-4 p-4">
-      <Toaster position="top-center" reverseOrder={false} />
+        <Toaster position="top-center" reverseOrder={false} />
         <CountdownCircleTimer
           isPlaying
           duration={30}
@@ -93,15 +94,17 @@ const Quiz = () => {
           )}
         </CountdownCircleTimer>
       </div>
-      {questions.length > 0 && (
-        <QuestionCard
-          question={questions[currentQuestion]}
-          onAnswer={handleAnswer}
-          isClickable={isClickable}
-          currentQuestion={currentQuestion}
-          questionslength={questions.length}
-        />
-      )}
+      <AnimatePresence mode="wait">
+        {questions.length > 0 && (
+          <QuestionCard
+            question={questions[currentQuestion]}
+            onAnswer={handleAnswer}
+            isClickable={isClickable}
+            currentQuestion={currentQuestion}
+            questionslength={questions.length}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
